@@ -1,0 +1,253 @@
+/* 贪食蛇样式 */
+/* 样式清零 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: rgba(246, 246, 246);
+}
+
+.box1 {
+    width: 80px;
+    height: 40px;
+    border-radius: 500px;
+    position: absolute;
+    top: 0;
+    left: 500px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 36px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.box2 {
+    width: 80px;
+    height: 40px;
+    border-radius: 500px;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 36px;
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+
+.tss-container {
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px dashed #ddd;
+    border-top: none;
+}
+
+.scoreboard-wrap {
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    position: absolute;
+    top: -46px;
+    border: 4px dashed #ddd;
+    border-bottom: 2px solid #ddd;
+    left: -4px;
+    overflow: hidden;
+}
+
+.scoreboard-wrap input {
+    width: 100px;
+    height: 40px;
+    border-radius: 500px;
+    position: absolute;
+    top: 0;
+    left: 320px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 36px;
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+
+.s-icon,
+.t-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-size: cover;
+}
+
+.s-icon {
+    background-image: url(../icon/蛇.png);
+}
+
+.t-icon {
+    background-image: url(../icon/时间.png);
+    top: 3px;
+    position: relative;
+}
+
+.score-text {
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    font-family: fantasy;
+    top: 3px;
+}
+
+.duration {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-family: fantasy;
+    color: #fff;
+    font-size: 30px;
+}
+
+.tss-wrap {
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tss-head {
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.tss-head.right {
+    border-radius: 0 10px 10px 0;
+}
+
+.tss-head.bottom {
+    border-radius: 0 0 10px 10px;
+}
+
+.tss-head.top {
+    border-radius: 10px 10px 0 0;
+}
+
+.tss-head.left {
+    border-radius: 10px 0 0 10px;
+}
+
+.tss-body {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    box-sizing: border-box;
+    border: 5px dashed #ddd;
+    border-radius: 2px;
+}
+
+.tss-egg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.box {
+    margin: 0 auto;
+    width: 1225px;
+    height: 600px;
+    position: relative;
+    top: 116px;
+}
+
+.stop {
+    width: 173px;
+    height: 149px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: skyblue;
+    border-radius: 15px;
+}
+
+.stop .zhuyi {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    color: rgba(237, 87, 87, 0.854);
+}
+
+.stop .begin {
+    margin: 16px 0 0 20px;
+}
+
+.stop div {
+    margin: 8px 0 0 20px;
+}
+
+.ranking {
+    width: 340px;
+    height: 390px;
+    background: url(../img/1.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    top: -47px;
+    left: 1055px;
+}
+
+.data {
+    margin: 110px 0 0 0px;
+}
+
+.text {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pai {
+    margin: 32px 0 0 80px;
+}
+
+.pai div {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.clear {
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    top: 282px;
+    left: 124px;
+    background-color: rgba(255, 0, 0);
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0px 7px 8px 0px #a6a6a6;
+    border-radius: 8px;
+    cursor: pointer;
+}

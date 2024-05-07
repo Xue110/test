@@ -1,0 +1,25 @@
+{
+    "loginUser": {
+        "username": "xue",
+        "password": "xue",
+        "email": "your_email",
+        "code": 200
+    },
+    "messages": [
+        {
+            "messageText": "message_content_1",
+            "code": 200,
+            "username":"xue"
+        },
+        {
+            "messageText": "message_content_2",
+            "code": 200,
+            "username":"xue"
+        },
+        {
+            "messageText": "message_content_3",
+            "code": 200,
+            "username":"xue"
+        }
+    ]
+}

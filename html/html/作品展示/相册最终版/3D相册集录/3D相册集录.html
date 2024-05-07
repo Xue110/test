@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>3D相册集录</title>
+   <link rel="stylesheet" href="3D相册集录.css">
+</head>
+
+<body>
+   <div id="side-menu" class="fas fa-bars"></div>
+   <div class="side-bar ">
+      <div class="bg  kenburns-top "></div>
+      <h1 class="heading">相册</h1>
+      <div class="box">
+         <h3 class="title">查找图片 :</h3>
+         <input type="text" placeholder="search image..." id="search-box">
+      </div>
+      <div class="box">
+         <h3 class="title" style="display: inline-block;">图片风格 :</h3>
+         <div class="category">
+            <div class="add"></div>
+            <div class="btn active" data-category="all"> all </div>
+            <div class="btn" data-category="小动物">小动物</div>
+            <div class="btn" data-category="人物">人物</div>
+            <div class="btn" data-category="风景">风景</div>
+            <div class="btn" data-category="动画">动画</div>
+         </div>
+      </div>
+      <div class="box">
+         <h3 class="title">格式 :</h3>
+         <div class="type">
+            <div class="btn active" data-type="all">所有格式</div>
+            <div class="btn" data-type="jpg">jpg</div>
+            <div class="btn" data-type="png">png</div>
+            <div class="btn" data-type="svg">svg</div>
+            <div class="btn" data-type="gif">Gif</div>
+            <div class="btn" data-type="tiff">tiff</div>
+         </div>
+      </div>
+      <div class="reset-btn">
+         <div class="btn">reset all</div>
+      </div>
+   </div>
+   <div class="gallery">
+      <h1 class="heading focus-in-contract-bck ">My images</h1>
+      <form class="box1" action="" autocomplete="off"> <input class="file" type="file"
+            onchange="handleFileSelect(event)">
+      </form>
+      <div class="image-container">
+         <h1 class="idea">添加你喜欢的照片吧！</h1>
+      </div>
+   </div>
+   <div class="image-popup">
+      <img src="" alt="">
+   </div>
+   <div class="player">
+      <div class=" active1" id="img"></div>
+      <audio id="audioPlayer" controls class="muisc">
+         <source src="song/Trash Beats - ｃｏｚｙ.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+      </audio>
+      <button class="pre"></button>
+      <button class="play"></button>
+      <button class="next"></button>
+   </div>
+   <div class="muisc-information">
+      <div class="name">ｃｏｚｙ</div>
+      <div class="songer">Trash Beats</div>
+   </div>
+   <script src="3D相册集录.js"></script>
+
+</body>
+
+</html>

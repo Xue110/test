@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWroom</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="shortcut icon" href="../favicon.ico" />
+</head>
+
+<body>
+    <div class="box">
+        <!--导航栏-->
+        <div class="top">
+            <div class="top-top"></div>
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="../home.html">首页</a></li>
+                <li>简介</li>
+                <a href="#recently">
+                    <li>近况</li>
+                </a>
+                <li>构成
+                    <ul>
+                        <a target="_blank" href="https://csc.beihua.edu.cn/info/1099/2382.htm">
+                            <li class="li-2" style="width: 120px;">指导教师</li>
+                        </a>
+                        <a target="_blank" href="../html/成员分布/1.html"><li class="li-2" style="width: 120px;">成员分布
+                        </li></a>
+                        <a target="_blank" href="../html/环境设施/环境设施.html"><li class="li-2" style="width: 120px;">环境设施
+                        </li></a>
+                    </ul>
+                </li>
+                <a target="_blank" href="../html/经纬工作室网站(作品展示部分)/作品展示.html">
+                    <li>作品展示</li>
+                </a>
+                <li>交流论坛</li>
+                <li id="leaveMessage">留言</li>
+                <!--留言板 -->
+                <div id="messagePopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <input type="text" id="username" placeholder="用户名" disabled="false">
+                        <input style="width: 400px;" type="text" id="messageText" placeholder="留言内容(最多三十字)"
+                            maxlength="30">
+                        <p class="text-family">文字字体：</p>
+                        <select id="textInput">
+                            <option value="宋体">宋体</option>
+                            <option value="黑体">黑体</option>
+                            <option value="微软雅黑">微软雅黑</option>
+                            <option value="楷体">楷体</option>
+                            <option value="仿宋">仿宋</option>
+                            <option value="华文细黑">华文细黑</option>
+                            <option value="华文楷体">华文楷体</option>
+                            <option value="华文宋体">华文宋体</option>
+                            <option value="华文中宋">华文中宋</option>
+                            <option value="华文仿宋">华文仿宋</option>
+                            <option value="华文彩云">华文彩云</option>
+                            <option value="华文琥珀">华文琥珀</option>
+                            <option value="华文隶书">华文隶书</option>
+                            <option value="方正舒体">方正舒体</option>
+                            <option value="方正姚体">方正姚体</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Palatino Linotype">Palatino Linotype</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Trebuchet MS">Trebuchet MS</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Book Antiqua">Book Antiqua</option>
+                            <option value="Courier">Courier</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Lucida Grande">Lucida Grande</option>
+                            <option value="Geneva">Geneva</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Bookman Old Style">Bookman Old Style</option>
+                            <option value="Century Gothic">Century Gothic</option>
+                            <option value="Copperplate">Copperplate</option>
+                        </select>
+                        <p class="text-color">文字颜色：</p>
+                        <input type="color" id="fontColor" placeholder="十六进制颜色(选填,默认白色)">
+                        <input id="colorValue" type="text" placeholder="选填">
+                        <button class="submit">留言</button>
+                    </div>
+                </div>
+                <li>测试内容</li>
+                <a target="_blank" href="../html/加入我们/复习.html"><li>加入我们</li></a>
+                <li>联系我们
+                    <ul>
+                        <li class="li-2"><img src="../img/lianxi.jpg" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tu">
+                <img id="image1" src="../img/导航栏_模式02.png" alt="Image 1" style="display: block;">
+                <img id="image2" src="../img/错叉_块.png" alt="Image 2" style="display: none;">
+            </div>
+        </div>
+        <!--开头-->
+        <div class="header">
+            <!-- <img src="../img/背景图/wenzi.png" alt=""> -->
+            <h1 class="jw">经纬工作室</h1>
+            <canvas id="messageCanvas" width="1704px" height="800px"></canvas>
+        </div>
+        <!--工作室近况-->
+        <div class="recently" id="recently">
+            <div class="text">
+                <div class="text-top">
+                    <p>RECENTLY</p>
+                    <p class="zhuang">工作室近况</p>
+                    <div class="text-top-box"></div>
+                </div>
+                <div class="text-header">
+                    <p>我们的工作室充满了创意和活力！在这里，我们不断探索设计的边界，挖掘无限的可能性，经纬工作室荣获多个奖项，并多次参与活动，同时为了提高团队凝聚力，进行了各种团建活动，例如轰趴馆、江边烧烤、滑雪等，在未来经纬工作室将继续秉承创新精神，不断进取，与时俱进。
+                    </p>
+                </div>
+                <div class="text-main">
+                    <ul id="list">
+                        <li data-image="../img/活动近照/团建1.png">
+                            <div>轰趴馆团建</div>
+                        </li>
+                        <li data-image="../img/活动近照/团建2.png">
+                            <div>端午节一起包粽子</div>
+                        </li>
+                        <li data-image="../img/活动近照/团建3.png">
+                            <div>江边烧烤</div>
+                        </li>
+                        <li data-image="../img/活动近照/滑雪.jpg">
+                            <div>五家山滑雪</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="immage" id="imageContainer">
+                <img style="display: block;" src="../img/活动近照/团建1.png" id="displayImage" alt="显示图片">
+            </div>
+        </div>
+
+        <!--团队成员-->
+        <di class="team">
+            <div class="team-top">
+                <div class="team-top-left">
+                    <p class="wd">TEAM MEMBERS</p>
+                    <p class="zhuang">团队成员</p>
+                </div>
+                <div class="team-top-center">
+                    <p>指导教师：李红果，现有成员20+名,具体方向分为前端，后端，UI等方向...</p>
+                    <p class="more"><a target="_blank" href="../html/成员分布/1.html">查看更多</a></p>
+                </div>
+                <div class="team-top-right">
+                    <div class="arrow left" onclick="moveLeft()">&lt;</div>
+                    <div class="arrow right" onclick="moveRight()">&gt;</div>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/老师-李红果.png" alt="指导老师：李红果">
+                        </div>
+                        <p>指导老师：李红果</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2004年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-老师</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/前端-续江畔.jpg" alt="前端-续江畔">
+                        </div>
+                        <p>续江畔</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2021年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-前端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/前端-薛佶曜.jpg" alt="前端-薛佶曜">
+                        </div>
+                        <p>薛佶曜</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2022年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-前端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/前端-车宇轩.jpg" alt="前端-车宇轩">
+                        </div>
+                        <p>车宇轩</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2022年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-前端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/前端-卢文婷.jpg" alt="前端-卢文婷">
+                        </div>
+                        <p>卢文婷</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2022年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-前端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/后端-夏雅慧.png" alt="后端-夏雅慧">
+                        </div>
+                        <p>夏雅慧</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2022年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-后端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/后端-马静.jpg" alt="后端-马静">
+                        </div>
+                        <p>马静</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2022年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-后端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/后端-刘新鸽.png" alt="后端-刘新鸽">
+                        </div>
+                        <p>刘新鸽</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2022年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-后端方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/苗茁.jpg" alt="苗茁">
+                        </div>
+                        <p>苗茁</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/任秋颐.jpg" alt="任秋颐">
+                        </div>
+                        <p>任秋颐</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/文宇航.jpg" alt="文宇航">
+                        </div>
+                        <p>文宇航</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/龙江.png" alt="龙江">
+                        </div>
+                        <p>龙江</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/郭益瑞.png" alt="郭益瑞">
+                        </div>
+                        <p>郭益瑞</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/UI-杨一名.jpg" alt="UI-杨一名">
+                        </div>
+                        <p>杨一名</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-UI方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/UI-陈萌.jpg" alt="UI-陈萌">
+                        </div>
+                        <p>陈萌</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-UI方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/UI-周佳慧.jpg" alt="UI-周佳慧">
+                        </div>
+                        <p>周佳慧</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-UI方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/UI-李玉杰.jpg" alt="UI-李玉杰">
+                        </div>
+                        <p>李玉杰</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-UI方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/UI-勾方虎.jpg" alt="UI-勾方虎">
+                        </div>
+                        <p>勾方虎</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-UI方向</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/杨嘉伟.jpg" alt="杨嘉伟">
+                        </div>
+                        <p>杨嘉伟</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="over">
+                            <img src="../img/人物/刘禹卓.jpg" alt="刘禹卓">
+                        </div>
+                        <p>刘禹卓</p>
+                        <div class="introduce">
+                            <img src="../img/图标/时间.png" alt="">
+                            <p style="padding-top: 5px;">加入时间：2023年</p>
+                            <img style="margin-top: -2px;" src="../img/图标/地点.png" alt="">
+                            <p>职位：经纬工作室-</p>
+                        </div>
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+            </div>
+
+            <!--作品展示-->
+            <div class="works">
+                <div class="works-top">
+                    <p style="text-transform: uppercase;">Exhibition of works</p>
+                    <h3>作品展示</h3>
+                    <div class="works-top-he"></div>
+                </div>
+                <div class="works-header">
+                    <p>经纬工作室自2004年创立以来，工作室成员运用自身技术，创造出了很多作品，例如北华大学计算机学院官网、文学院、法学院官网等，以及一些五子棋，贪吃蛇，扫雷，植物大战僵尸(改良版)、黄金矿工等游戏，同时也创作出了3D相册、记账本等
+                    </p>
+                </div>
+
+                <div class="custom-container">
+                    <div class="custom-carousel">
+                        <div class="custom-slide">
+                            <a href="https://wxy.beihua.edu.cn/" target="_blank">
+                                <div class="cust">
+                                    <img src="../img/作品展示/文学院.png" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="custom-slide">
+                            <a href="https://csc.beihua.edu.cn/`" target="_blank">
+                                <div class="cust" href="">
+                                    <img src="../img/作品展示/计算机学院.png" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="custom-slide">
+                            <a href="https://law.beihua.edu.cn/" target="_blank">
+                                <div class="cust">
+                                    <img src="../img/作品展示/法学院.png" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="custom-slide">
+                            <a href="../html/作品展示/五子棋.html" target="_blank">
+                                <div class="cust">
+                                    <img src="../img/作品展示/五子棋.png" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="custom-slide">
+                            <a href="../html/作品展示/贪吃蛇/贪吃蛇.html" target="_blank">
+                                <div class="cust">
+                                    <img src="../img/作品展示/贪吃蛇.png" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="custom-slide">
+                            <a href="../html/作品展示/相册最终版/3D相册集录/3D相册集录.html" target="_blank">
+                                <div class="cust">
+                                    <img src="../img/作品展示/3d.jpg" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="custom-slide">
+                            <a href="../html/作品展示/大项目---扫雷/扫雷游戏.html" target="_blank">
+                                <div class="cust">
+                                    <img src="../img/作品展示/扫雷..jpg" alt="Image 1">
+                                    <p>点击查看</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="custom-dots">
+                        <span class="custom-dot"></span>
+                        <span class="custom-dot"></span>
+                        <span class="custom-dot"></span>
+                        <span class="custom-dot"></span>
+                        <span class="custom-dot"></span>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    <script src="../js/home.js"></script>
+    <script src="../js/work-slide.js"></script>
+    <script src="../js/留言.js"></script>
+</body>
+
+</html>

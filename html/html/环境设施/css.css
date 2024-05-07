@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+    list-style-type: none;
+}
+
+.homepage {
+    margin: 0 auto;
+    width: 1692px;
+    height: 846px;
+    overflow: hidden;
+}
+
+.enterBtn {
+    border: 1px solid white;
+    letter-spacing: 8px;
+    position: absolute;
+    top: 650px;
+    left: 725px;
+    width: 250px;
+    height: 55px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    z-index: 4;
+    color: white;
+    font-size: 20px;
+    font-weight: 1000;
+    overflow: hidden;
+}
+.enterBtn p{
+    position: relative;
+    z-index: 3;
+}
+.enterBtn:hover .Btncolor{
+    left: 0px;
+}
+.Btncolor{
+    position: absolute;
+    top: 0px;
+    left: -250px;
+    transition: 0.5s ease-out;
+    width: 100%;
+    height: 100%;
+    background: #3E5151;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DECBA4, #3E5151);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 1;
+}
+
+.muisc {
+    display: none;
+}
+
+.player {
+    z-index: 2;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    box-shadow: 10px 12px 16px -6px rgba(0, 0, 0, 0.584);
+}
+
+.player #img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 1;
+    position: relative;
+    top: -25px;
+    left: 6px;
+    width: 40px;
+    height: 40px;
+}
+
+.muisc-information {
+    padding: 5px 0px 0px 10px;
+    position: fixed;
+    z-index: 1;
+    width: 200px;
+    height: 40px;
+    top: 50px;
+    right: 50px;
+    transition: all .5s;
+    color: white;
+    font-weight: 1000;
+}
+
+.muisc-information .name {
+    font-size: 15px;
+}
+
+.muisc-information .songer {
+    font-size: 10px;
+    opacity: .6;
+}
+
+.icon-p,
+.play {
+    background-image: url(imgs/musiclog/播放.png);
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+}
+
+.icon-z {
+    background-image: url(imgs/musiclog/暂停.png);
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+}
+
+.pre {
+    background-image: url(imgs/musiclog/上一首.png);
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+}
+
+.next {
+    background-image: url(imgs/musiclog/下一首.png);
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+}
+
+.active1 {
+    background-image: url(imgs/songpic/01.png);
+    background-size: 100%;
+}
+
+.active2 {
+    background-image: url(imgs/songpic/02.png);
+    background-size: 100%;
+}
+
+.active3 {
+    background-image: url(imgs/songpic/03.png);
+    background-size: 100%;
+}
+
+.active4 {
+    background-image: url(imgs/songpic/04.png);
+    background-size: 100%;
+}
+
+.active5 {
+    background-image: url(imgs/songpic/05.png);
+    background-size: 100%;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+/* page1的代码 */
+.page1 {
+    /* 景深 */
+    perspective: 750px;
+    z-index: 1;
+    background-image: url(imgs/背景.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 3s;
+    /* background: #bdc3c7;
+    background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);
+    background: linear-gradient(to top, #2c3e50, #bdc3c7); */
+
+}
+
+.equipsheet {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    /* 设置3d环境 */
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: 2s;
+    position: relative;
+    top: 0px;
+}
+
+.imgInfro {
+    width: 310px;
+    height: 150px;
+    box-shadow: 0 5 px 10px 0px rgba(0, 0, 0, 0.584);
+    border-radius: 5px;
+    transform: rotateY(0deg) translateZ(0px);
+    transition: 1s 1s;
+    position: absolute;
+    top: 0px;
+}
+
+.equipsheet img {
+    width: 310px;
+    height: 150px;
+    border-radius: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.equipMeg {
+    width: 310px;
+    height: 150px;
+    position: relative;
+    top: 0px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.equipTitle {
+    width: 30%;
+    font-size: 20px;
+    font-weight: 1000;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    top: 10px;
+}
+
+.equipInfro {
+    width: 80%;
+    border-left: 3px solid #2c3e50;
+    color: #bdc3c7;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    line-height: 30px;
+    padding: 0px 5px;
+}
+
+
+/* 封面的代码 */
+.page2 {
+    position: relative;
+    top: -846px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+    transition: 0s;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0s;
+    z-index: 4;
+}
+
+.dlt {
+    background-image: url(imgs/JWbglt.jpg);
+    background-size: 100%;
+    position: relative;
+    left: 0px;
+}
+
+.drt {
+    background-image: url(imgs/JWbgrt.jpg);
+    background-size: 100%;
+    position: relative;
+    left: 0px;
+}
+
+/* .page1{
+    height: 100%;
+    background-color: #f0f0f0;
+    transform: translateY(100%);
+    transition: transform 1s ease;
+  }
+  .page1.show {
+    transform: translateY(0);
+} */
+.title {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 1000;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.dlt .title {
+    font-size: 50px;
+}
+
+.tlt {
+    transition: 0s;
+    left: 0px;
+}
+
+.drt .title {
+    font-size: 45px;
+}
+
+.trt {
+    transition: 0s;
+    left: 0px;
+}
+
+.intro {
+    width: 95%;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dlt .intro {
+    line-height: 42px;
+    font-size: 27px;
+}
+
+.ilt {
+
+    transition: 0s;
+    left: 0px;
+}
+
+.drt .intro {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.irt {
+    transition: 0s;
+    left: 0px;
+}
+
+/* 封面字体显现样式 */
+.focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-4-13 20:2:37
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation focus-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}

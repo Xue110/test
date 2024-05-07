@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/贪吃蛇.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="stop">
+            <div class="zhuyi">游戏规则</div>
+            <div class="begin">按“V”为 开始</div>
+            <div>按“B”为 重新开始</div>
+            <div>按“空格”为 暂停</div>
+        </div>
+        <div class="tss-container">
+            <!-- 计分板 -->
+            <div class="scoreboard-wrap">
+                <!-- 得分 -->
+                <div class="score">
+                    <i class="s-icon"></i>
+                    <span class="score-text">0</span>
+                </div>
+                <div class="box1">暂停</div>
+                <input type="button" onclick="javascript:location.reload()" value="重新开始">
+                <div class="box2">开始</div>
+                <!-- 游戏时长 -->
+                <div class="duration">
+                    <i class="t-icon"></i>
+                    <!-- 分钟 -->
+                    <span class="min">00</span>
+                    <!-- 间隔 -->
+                    <span>:</span>
+                    <!-- 秒钟 -->
+                    <span class="sec">00</span>
+                </div>
+            </div>
+            <!-- 活动区域 -->
+            <div class="tss-wrap">
+
+                <!-- 贪食蛇 -->
+                <div class="tss-head right"></div>
+                <!-- 贪食蛇蛇身 -->
+                <div class="tss-body"></div>
+                <div class="tss-body"></div>
+                <div class="tss-body"></div>
+                <div class="tss-body"></div>
+                <div class="tss-body"></div>
+            </div>
+        </div>
+        <div class="ranking">
+            <div class="data">
+                <div class="text">历史最高分排行榜</div>
+                <div class="pai">
+                    <div class="first" id="first">第一：0</div>
+                    <div class="second" id="second">第二：0</div>
+                    <div class="third" id="third">第三：0</div>
+                </div>
+            </div>
+            <button id="clear" class="clear">清空数据</button>
+        </div>
+    </div>
+    <script src="./js/贪吃蛇.js"></script>
+</body>
+
+</html>

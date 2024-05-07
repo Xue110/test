@@ -1,0 +1,262 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-family: Roboto, Arial, sans-serif;
+    color: white;
+    
+}
+body{
+
+width: 100%;
+height: 100%;
+}
+.kenburns-top{
+    width: 100%;
+height: 100%;
+background-image: url(imgs/背景.png);
+background-size: 100%;
+position: fixed;
+top: 0px;
+left: 0px;
+}
+video{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+}
+.out {
+    width: 1610px;
+    height: 650px;
+}
+
+.out h2 {
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.out h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.tracking-in-contract {
+    -webkit-animation: tracking-in-contract .8s cubic-bezier(.215, .61, .355, 1.000) both;
+    animation: tracking-in-contract .8s cubic-bezier(.215, .61, .355, 1.000) both
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1
+    }
+}
+
+@keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1
+    }
+}
+
+.tracking-in-contract-bck {
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(.215, .61, .355, 1.000) both;
+    animation: tracking-in-contract-bck 1s cubic-bezier(.215, .61, .355, 1.000) both
+}
+
+@-webkit-keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1
+    }
+}
+
+@keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1
+    }
+}
+
+.works {
+    width: 100%;
+    height: 400px;
+    border-top: 2px double black;
+     display: flex; 
+    flex-wrap:wrap;
+    justify-content: flex-start ;
+}
+
+.work {
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    cursor: pointer;
+    background-position: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+   position: relative;
+  
+}
+
+.tab button {
+    float: left;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #eeeeee85;
+    color: rgb(37, 115, 242);
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 520;
+    position: relative;
+    top: 0;
+    transition: all .3s;
+}
+button:hover{
+    top: -5px;
+}
+
+.puff-out-center {
+    animation: puff-out-center 1.3s cubic-bezier(.165, .84, .44, 1.000) both
+}
+
+@keyframes puff-out-center {
+    0% {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(10);
+        filter: blur(4px);
+        opacity: 0
+    }
+}
+
+.saolei {
+    background-image: url(imgs/扫雷..jpg);
+    background-size: 178%;
+
+}
+
+.snake {
+    background-image: url(imgs/贪吃蛇webp.webp);
+    background-size: 130%;
+
+}
+
+.wuziqi {
+    background-image: url(imgs/五子棋.png);
+    background-size: 100%;
+}
+
+.jw-2048 {
+    background-image: url(imgs/2048.png);
+    background-size: 99%;
+}
+
+.GoldenMiner {
+    background-image: url(imgs/黄金矿工.png);
+    background-size: 100%;
+    background-position: 0px 0px;
+}
+
+.lawSchool {
+    background-image: url(imgs/法学院.png);
+    background-size: 150%;
+    background-position: -40px 0px;
+}
+
+.ArtSchool {
+    background-image: url(imgs/文学院.png);
+    background-size: 180%;
+    background-position: -60px 0px;
+}
+
+.ComputSchool {
+    background-image: url(imgs/计算机学院.png);
+    background-size: 120%;
+}
+
+.album-3d {
+    background-image: url(imgs/3d.jpg);
+    background-size: 100%;
+}
+
+.fireWorks {
+    background-image: url(imgs/烟花.jpg);
+    background-size: 150%;
+}
+.title{
+    position: relative;
+    top: -30px;
+    font-weight: 600;
+}
+.tab .active{
+background-color: #87CDD9;
+color: rgba(0, 0, 0, 0.619);
+}
+.jello-horizontal{animation:jello-horizontal .9s both}
+ 
+
+ @keyframes jello-horizontal{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
+
+ .vibrate-1{animation:vibrate-1 .3s cubic-bezier(.68,-.55,.265,1.55) infinite alternate-reverse backwards}
+ @keyframes vibrate-1{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}}
+ .kenburns-top{animation:kenburns-top 10s ease-out both}
+ @keyframes kenburns-top{0%{transform:scale(1) translateY(0);transform-origin:50% 16%}100%{transform:scale(1.25) translateY(-15px);transform-origin:top}}
+

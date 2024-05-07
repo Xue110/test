@@ -1,0 +1,626 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.box {
+    width: 1706px;
+    height: 4000px;
+    margin: 0 auto;
+}
+
+.top {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    align-items: center;
+    z-index: 9999;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.logo {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 45%;
+    margin-left: 250px;
+}
+
+.menu {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 120px;
+}
+
+.top ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+}
+
+.top li {
+    margin: 0 5px;
+    position: relative;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    width: 80px;
+    text-align: center;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.top li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.top ul ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    z-index: 1;
+    margin-left: -20px;
+}
+
+.li-2 {
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 0;
+}
+
+.li-2:hover {
+    color: white;
+}
+
+.top li:hover>ul {
+    display: block;
+}
+
+.li-2 img {
+    width: 120px;
+}
+
+.tu {
+    position: relative;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, rgb(0, 0, 139) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.top-top {
+    position: absolute;
+    top: 0;
+    width: 1706px;
+    height: 3px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 139) 100%);
+}
+
+.tu img {
+    margin: 0 auto;
+    line-height: 100px;
+    width: 40px;
+    margin-top: 25px;
+}
+
+.header {
+    width: 1706px;
+    text-align: center;
+    height: 906px;
+    background-image: url(../img/背景图/bg4.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.jw {
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ffdb6a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 100px;
+    position: relative;
+    top: 50px;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Pacifico', cursive;
+}
+.header img {
+    margin-top: 160px;
+}
+
+.recently {
+    width: 1706px;
+    height: 906px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.text {
+    flex: 1;
+}
+
+.text-top {
+    margin-left: 200px;
+    margin-top: 110px;
+    font-size: 20px;
+}
+
+.zhuang {
+    margin-top: -15px;
+    font-size: 30px;
+}
+
+.text-top-box {
+    width: 100px;
+    height: 4px;
+    background-color: rgb(11, 11, 137);
+    margin-top: -10px;
+}
+
+.immage {
+    flex: 2;
+    height: 780px;
+    margin-top: 100px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6)100%);
+}
+
+.text-header {
+    text-align: left;
+    width: 400px;
+    margin-left: 200px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 40px;
+    color: rgb(146, 146, 146);
+}
+
+.text-main {
+    width: 400px;
+    height: 500px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.text-main ul {
+    list-style-type: none;
+    /* 移除默认的列表样式 */
+    padding: 0;
+    /* 移除内边距 */
+    margin: 0;
+    /* 移除外边距 */
+}
+
+.text-main li {
+    width: 350px;
+    height: 80px;
+    text-align: left;
+    line-height: 80px;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgb(220, 220, 220);
+    position: relative;
+    /* 设置相对定位 */
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.text-main li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    /* 调整斜边的宽度 */
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    /* 上边斜边 */
+    border-bottom: 40px solid transparent;
+    /* 下边斜边 */
+    border-left: 50px solid #fff;
+    /* 左边斜边 */
+}
+
+.text-main div {
+    width: 345px;
+    height: 50px;
+    position: relative;
+    /* 设置相对定位 */
+    top: 20%;
+    /* 向下偏移一半高度 */
+    line-height: 50px;
+    transition: all 0.3s;
+    padding-left: 20px;
+}
+
+.text-main li.active {
+    width: 420px;
+}
+
+.text-main li.active div {
+    border-left: 3px solid rgb(11, 11, 137);
+    padding-left: 40px;
+    color: rgb(11, 11, 137);
+}
+
+.immage img {
+    position: relative;
+    top: 80px;
+    left: 50px;
+    width: 1000px;
+    height: 600px;
+    display: none;
+    /* 初始隐藏 */
+}
+
+.team {
+    width: 1706px;
+    height: 550px;
+    margin: 0 auto;
+    background-color: rgb(242, 243, 249);
+    display: block;
+    padding-top: 30px;
+    margin-top: -27px;
+}
+
+.team-top {
+    width: 1706px;
+    height: 100px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.team-top-left {
+    flex: 1;
+    text-align: center;
+    height: 70px;
+    border-right: 4px solid rgb(11, 11, 137);
+    margin-left: 160px;
+}
+
+.team-top-center {
+    flex: 3;
+    height: 100px;
+    color: rgb(146, 146, 146);
+    padding-left: 30px;
+    line-height: 45px;
+    font-size: 14px;
+}
+
+.team-top-right {
+    flex: 1;
+    height: 70px;
+}
+
+.more {
+    width: 100px;
+    position: relative;
+    left: 510px;
+    top: -60px;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 20%;
+    /* Each slide takes up 20% width to fit 5 slides in total */
+    margin: 0 10px;
+    /* Add margin between slides */
+}
+
+.over {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    transition: transform 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.slide img:hover {
+    transform: scale(1.2);
+    /* 悬停时放大到 1.2 倍 */
+}
+
+.slide p {
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    z-index: 999;
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.slide p:hover {
+    color: rgb(11, 11, 137);
+}
+
+.arrow {
+    position: relative;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.arrow.left {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    left: 30px;
+    text-align: center;
+    line-height: 50px;
+    top: 35px;
+}
+
+.arrow.right {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    top: -15px;
+    border: 1px solid black;
+    border-radius: 50px;
+    line-height: 50px;
+    left: 100px;
+}
+
+.introduce {
+    width: 300px;
+    height: 40px;
+    border-left: 2px solid rgb(11, 11, 137);
+    padding-left: 10px;
+}
+
+.introduce p {
+    width: 300px;
+    height: 7px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 10px;
+    margin-left: 15px;
+}
+
+.introduce img {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+}
+
+.works {
+    width: 1706px;
+    height: 780px;
+    background: linear-gradient(to bottom, rgb(242, 243, 249) 0%, rgba(0, 0, 0, 0)100%);
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.works-top {
+    width: 550px;
+    height: 70px;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.works-top h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: -15px;
+}
+
+.works-top-he {
+    width: 100px;
+    height: 5px;
+    color: rgb(11, 11, 137);
+}
+
+.works-header {
+    margin: 0 auto;
+    font-size: 14px;
+    color: rgb(146, 146, 146);
+    line-height: 1.5;
+    width: 550px;
+    height: 80px;
+    text-align: center;
+}
+
+.custom-container {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.custom-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* 添加过渡效果，实现平滑滚动 */
+}
+
+.custom-slide {
+    flex: 0 0 calc(100% / 3);
+    /* 每个轮播项占据容器宽度的1/3 */
+    height: 300px;
+    
+}
+
+.custom-dots {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.custom-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #555;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.custom-dot.active {
+    background-color: #f00;
+}
+.custom-slide img{
+    width: 400px;
+    height: 200px;
+}
+.custom-slide a{
+    color: rgb(11, 11, 137);
+}
+canvas {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 99;
+    top: 100px;
+}
+.cust{
+    width: 400px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: rgb(242,243,249);
+    position: relative;
+    left: 80px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.cust p{
+    line-height: 0px;
+}
+.cust:hover{
+    background-color: rgb(104, 104, 107);
+}
+.cust:hover p{
+    color: rgb(242,243,249);
+}
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #99ccf9;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1400px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 440px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+.popup input{
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 17px;
+    font-family: '楷体';
+}
+.popup input:focus{
+    outline: none;
+}
+.popup button{
+    width: 100px;
+    height: 50px;
+    margin-left: 150px;
+    background-color: #CCFFFF;
+    color: #6699FF;
+    border: 0;
+    border-radius: 120px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: '楷体';
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#fontStyle{
+    width: 120px;
+}
+#fontColor{
+    position: relative;
+    width: 65px;
+    height: 45px;
+    top: 10px;
+    padding: 5px;
+    margin-left: 0;
+}
+#colorValue{
+    width: 80px;
+    margin-left: 10px;
+    height: 25px;
+}
+.text-color,.text-family{
+    display: inline;
+    width: 70px;
+    margin-left: 20px;
+}
+#textInput{
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-family: '楷体';
+}

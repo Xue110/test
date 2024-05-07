@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 15px auto 10px auto;
+  font-size: 60px;
+}
+.homepage{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.grade {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.grade button {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  background-color: aquamarine;
+  border: 2px solid aqua;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.mineSum {
+  text-align: center;
+  margin: 8px auto;
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+.flagNum {
+  margin: 8px auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 1000;
+}
+.rightflag{
+  margin: 8px auto;
+  text-align: center;
+  font-weight: 1000;
+  font-size: 16px;
+}
+
+.grade button.nowGrade {
+  color: white;
+  background-color: rgb(132, 243, 243);
+}
+
+table{
+  background-color: rgb(146, 148, 148);
+  margin: 0 auto;
+  border-spacing: 1px;
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.3);
+}
+
+table td{
+  height: 20px;
+  width: 20px;
+  background-color: rgba(127,255,212,0.9);
+  border: 2px solid ;
+  border-color: #fff #a1a1a1 #a1a1a1 #fff;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+td div{
+  height: 100%;
+  width: 100%;
+}
+td div.mine{
+  background: url(./img/地雷.png) center/cover no-repeat;
+  opacity: 0.3;
+  /* opacity: 0; */
+}
+
+td div.flag{
+  background: url(./img/flag.png) center/cover no-repeat;
+  opacity: 1;
+}
+td div.error{
+  background-color: rgb(143, 0, 0);
+}
+td div.right{
+  background-color: rgb(11, 214, 11);
+}
+
+td div.one{
+  color: red;
+}
+td div.two{
+  color: rgb(27, 152, 255);
+}
+td div.three{
+  color: rgb(1, 184, 68);
+}
+td div.four{
+  color: rgb(179, 56, 255);
+}
+td div.five{
+  color: rgb(236, 151, 32);
+}
+td div.six{
+  color: rgb(0, 0, 0);
+}
+td div.seven{
+  color: rgb(71, 6, 211);
+}
+td div.eight{
+  color: rgb(117, 78, 0);
+}
