@@ -98,9 +98,9 @@ function loginUser() {
     })
         .then(function (response) {
             // 检查响应中是否包含 JWT 令牌
-            if (response.data && response.data.code === 200 && response.data.data) {
+            if (response.data && response.data.code === 200 && response.data.info) {
                 // 存储 JWT 令牌到本地存储
-                localStorage.setItem('token', response.data.data);
+                localStorage.setItem('token', response.data.info);
                 console.log(response.data);
                 // 登录成功后跳转到首页
                 window.location.href = './html/home.html';
