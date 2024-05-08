@@ -93,14 +93,19 @@ function loginUser() {
     // 发送 GET 请求
     axios.get(`http://localhost:8080/login?${queryParams}`, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         }
     })
         .then(function (response) {
-            if (response.data.code === 200) {
+            // 检查响应中是否包含 JWT 令牌
+            if (response.data && response.data.code === 200 && response.data.data) {
+                // 存储 JWT 令牌到本地存储
+                localStorage.setItem('token', response.data.data);
                 console.log(response.data);
-                window.location.href = './html/home.html'; // 登录成功后跳转到首页
+                // 登录成功后跳转到首页
+                window.location.href = './html/home.html';
             } else {
+                // 登录失败，显示错误信息或执行其他操作
                 throw new Error("登录失败，请重试");
             }
         })

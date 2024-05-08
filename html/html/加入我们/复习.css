@@ -9,8 +9,8 @@
   background: url(img/ocean-water_4I0HL37YBO.jpg) no-repeat;
   background-size: cover;
   /* background-color: antiquewhite; */
-  height: 850px;
-  width: 1500px;
+  height: 100%;
+  width: 100%;
 }
 .butting {
   position: relative;

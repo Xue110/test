@@ -20,25 +20,19 @@ leaveMessage.addEventListener('click', function () {
 closee.onclick = function () {
     messagePopup.style.display = 'none';
 };
+
 // 封装获取留言的函数
 function fetchMessages() {
-    return fetch('http://localhost:8080/messages')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        });
-}
+    // 从本地存储中获取令牌
+    const token = localStorage.getItem('token');
+    
+    // 构建请求头，包括令牌
+    const headers = {
+        'Authorization': `Bearer ${token}` // 添加令牌到请求头
+    };
 
-// 封装发送消息的函数
-function sendMessage(data) {
-    return fetch('http://localhost:8080/sendmessages', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+    return fetch('http://localhost:8080/messages', {
+        headers: headers // 使用包含令牌的请求头
     })
     .then(response => {
         if (!response.ok) {
@@ -48,6 +42,29 @@ function sendMessage(data) {
     });
 }
 
+// 封装发送消息的函数
+function sendMessage(data) {
+    // 从本地存储中获取令牌
+    const token = localStorage.getItem('token');
+    
+    // 构建请求头，包括令牌
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}` // 添加令牌到请求头
+    };
+
+    return fetch('http://localhost:8080/sendmessages', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: headers // 使用包含令牌的请求头
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    });
+}
 const defaultFont = '微软雅黑';
 const defaultFontSize = '25px'; // 设置默认的文字大小为 20px
 
